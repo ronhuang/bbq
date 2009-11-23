@@ -12,6 +12,12 @@ class EatsController < ApplicationController
   end
 
   def y2006
+    @groceries = Grocery.find(:all, :order => "vote DESC, id ASC", :conditions => ["event = ?", Date.new(2006, 9, 22)])
+
+    respond_to do |format|
+      format.html # y2006.html.erb
+      format.xml  { render :xml => @posts }
+    end
   end
 
   def index
