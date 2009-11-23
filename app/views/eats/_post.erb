@@ -1,0 +1,35 @@
+<%-
+require 'uri'
+require 'iconv'
+require 'date'
+
+url_title = URI.escape(grocery.title)
+url_big5_title = URI.escape(Iconv.new('big-5', 'utf-8').iconv(grocery.title))
+%>
+          <div class="blog_post" id="blog_posts_<%= grocery.id %>">
+            <div class="info">
+              <h3><%= grocery.submitter %> 想吃: &nbsp;</h3>
+              <em><%= grocery.submit_date.strftime("%b %d, %Y %H:%M:%S") %></em><br />
+            </div>
+
+            <div class="body">
+              <div class="title">
+                <h1>
+                  <span class="handle"><%= grocery.title %></span>
+                  <em>(<span id="vote_<%= grocery.id %>"><%= grocery.vote %></span> 票)</em>
+                </h1>
+                <%= link_to_remote image_tag("push.gif", :alt => "推"), :update => "vote_#{grocery.id}",
+                  :url => {:action => "vote", :id => grocery.id, :source => "#{@source}"} %>&nbsp;
+                <%= link_to image_tag("google.gif", :alt => "在 Google Image 搜尋「#{grocery.title}」"),
+                  "http://images.google.com/images?q=#{url_title}&hl=zh-TW" %>&nbsp;
+                <%= link_to image_tag("knowledge.gif", :alt => "在 Yahoo 知識+ 搜尋「#{grocery.title}」"),
+                  "http://tw.knowledge.yahoo.com/search/search_result?p=#{url_title}" %>&nbsp;
+                <%= link_to image_tag("bid.gif", :alt => "在 Yahoo 拍賣 搜尋「#{grocery.title}」"),
+                  "http://tw.search.bid.yahoo.com/search/ac?p=#{url_big5_title}" %>
+              </div>
+
+              <div class="excerpt"><p><%= grocery.text %></p></div>
+            </div>
+
+            <div style="clear:both;"></div>
+          </div>
