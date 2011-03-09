@@ -1,0 +1,91 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+          "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+
+  <head>
+    <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+    <title>第二屆Pre-中秋烤肉晚會</title>
+
+    <script src="/eats/javascripts/prototype.js" type="text/javascript"></script>
+    <script src="/eats/javascripts/effects.js" type="text/javascript"></script>
+    <script src="/eats/javascripts/dragdrop.js" type="text/javascript"></script>
+    <script src="/eats/javascripts/controls.js" type="text/javascript"></script>
+    <script src="/eats/javascripts/application.js" type="text/javascript"></script>
+
+    <link href="/eats/stylesheets/reset-min.css" media="screen" rel="stylesheet" type="text/css" />
+    <link href="/eats/stylesheets/style.css" media="screen" rel="stylesheet" type="text/css" />
+
+    <!--[if lte IE 6]>
+    <script type="text/javascript" charset="utf-8">
+        /* quick code thanks to http://alistapart.com/articles/horizdropdowns */
+        /* haven't actually testing myself... no IE6! */
+        startList = function() {
+            if (document.all&&document.getElementById) {
+                navRoot = document.getElementById("nav");
+                for (i=0; i<navRoot.childNodes.length; i++) {
+                    node = navRoot.childNodes[i];
+                    if (node.nodeName=="LI") {
+                        node.onmouseover=function() {
+                            this.className+=" over";
+                        }
+                        node.onmouseout=function() {
+                            this.className=this.className.replace(" over", "");
+                        }
+                    }
+                }
+            }
+        }
+        window.onload=startList;
+    </script>
+    <![endif]-->
+  </head>
+
+  <body>
+    <div id="wrap">
+      <div id="top" class="clearfix">
+        <h1><a href="/eats/midautumn2007">bbq</a></h1>
+        <div id="msg"><div>
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          　還有畢業生同樂會。<a href="/eats/y2006" class="easteregg">　</a>
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        </div></div>
+      </div>
+
+      <div id="top2" class="clearfix">
+        <ul id="menu">
+          <li class="popular"><a href="/eats/midautumn2007?sort=vote+DESC">Popular</a></li>
+          <li class="latest"><a href="/eats/midautumn2007?sort=id+DESC">Latest</a></li>
+          <li class="owner"><a href="/eats/midautumn2007?sort=submitter+ASC">Owner</a></li>
+        </ul>
+      </div>
+
+      <div id="body" class="grid clearfix">
+
+        <div class="grid1">
+          <div id="blog_posts">
+
+          <%- partial('grocery', groceries) %>
+
+          </div>
+
+          <script type="text/javascript">
+          // <![CDATA[
+            Sortable.create("blog_posts", {dropOnEmpty:true, tag:'div', handle:'handle', constraint:false});
+          // ]]>
+          </script>
+
+        </div> <!-- Close 'grid1' div -->
+
+        <div class="grid2" id="sidebar">
+          <p class="help">如何使用？你覺得我會寫說明嗎？直接寫信問我吧...</p>
+        </div> <!-- Close 'grid2' div -->
+
+      </div> <!-- Close 'grid' div -->
+
+    </div>
+  </body>
+
+</html>

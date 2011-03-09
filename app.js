@@ -17,7 +17,7 @@ app.configure(function(){
   app.use(express.cookieParser());
   app.use(express.session({ secret: 'darth feces was here' }));
   app.use(app.router);
-  app.use(express.static(__dirname + '/public'));
+  app.use('/eats', express.static(__dirname + '/public'));
 });
 
 app.configure('development', function(){
@@ -30,12 +30,33 @@ app.configure('production', function(){
 
 // Routes
 
-app.get('/eats/', function(req, res){
+app.get('/eats/?', function(req, res){
   res.redirect('/eats/midautumn2007');
 });
 
+var Grocery = function () {
+  this.id = 0;
+  this.submitter = "Ron";
+  this.submit_date = new Date;
+  this.title = "知味香玉米";
+  this.vote = 1;
+  this.url_title = "知味香玉米";
+  this.text = "這家比較讚...";
+};
+
 app.get('/eats/midautumn2007', function(req, res){
-  res.render('index', {
+  var groceries = [];
+  groceries.push(new Grocery);
+  groceries.push(new Grocery);
+
+  res.render('midautumn2007', {
+    groceries: groceries,
+    layout: false,
+  });
+});
+
+app.get('/eats/y2006', function(req, res){
+  res.render('y2006', {
     title: 'Express'
   });
 });
