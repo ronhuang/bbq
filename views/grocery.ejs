@@ -1,7 +1,9 @@
+<% var submit_date = (new Date(grocery.submit_date)).format("mmm dd, yyyy HH:MM:ss"); %>
+
           <div class="blog_post" id="blog_post_<%= grocery.id %>">
             <div class="info">
               <h3><%= grocery.submitter %> 想吃: &nbsp;</h3>
-              <em><%= grocery.submit_date %></em><br />
+              <em><%= submit_date %></em><br />
             </div>
 
             <div class="body">
@@ -10,9 +12,9 @@
                   <span class="handle"><%= grocery.title %></span>
                   <em>(<span id="vote_<%= grocery.id %>"><%= grocery.vote %></span> 票)</em>
                 </h1>
-                <a href="http://images.google.com/images?q=<%= grocery.url_title %>&amp;hl=zh-TW"><img alt="在 Google Image 搜尋「<%=grocery.title %>」" src="/eats/images/google.gif" /></a>&nbsp;
-                <a href="http://tw.knowledge.yahoo.com/search/search_result?p=<%= grocery.url_title %>"><img alt="在 Yahoo 知識+ 搜尋「<%=grocery.title %>」" src="/eats/images/knowledge.gif" /></a>&nbsp;
-                <a href="http://tw.search.bid.yahoo.com/search/ac?p=<%= grocery.url_title %>"><img alt="在 Yahoo 拍賣 搜尋「<%=grocery.title %>」" src="/eats/images/bid.gif" /></a>
+                <a href="http://images.google.com/images?q=<%= grocery.title %>&amp;hl=zh-TW"><img title="在 Google Image 搜尋「<%=grocery.title %>」" src="/eats/images/google.gif" /></a>&nbsp;
+                <a href="http://tw.knowledge.yahoo.com/search/search_result?p=<%= grocery.title %>"><img title="在 Yahoo 知識+ 搜尋「<%=grocery.title %>」" src="/eats/images/knowledge.gif" /></a>&nbsp;
+                <a href="http://search.twitter.com/search?q=<%= grocery.title %>"><img title="在 Twitter 搜尋「<%=grocery.title %>」" src="/eats/images/twitter.gif" /></a>
               </div>
 
               <div class="excerpt"><p><%= grocery.text %></p></div>

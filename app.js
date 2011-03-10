@@ -5,6 +5,7 @@
 
 var express = require('express');
 var grocery = require('./models/grocery');
+require('./utils/date.format');
 
 var persistence = require('persistencejs/lib/persistence').persistence;
 var persistenceStore = require('persistencejs/lib/persistence.store.sqlite');
