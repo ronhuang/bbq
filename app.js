@@ -46,6 +46,7 @@ app.get('/eats/?', function(req, res){
 
 app.get('/eats/midautumn2007', function(req, res){
   var sort = req.param('sort', req.cookies.sort || "submit_date DESC");
+  res.cookie('sort', sort, { maxAge: 604800000 }); // 7 days.
   var sort = sort.split(' ');
   var property = sort[0];
   var ascending = (sort[1] == "ASC");
