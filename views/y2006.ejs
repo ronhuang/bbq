@@ -1,0 +1,346 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+          "http://www.w3.org/TR/html4/loose.dtd">
+
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <title>Pre-中秋烤肉晚會</title>
+
+  <style type="text/css">
+  #g_title p, #g_footer p, #g_description p {
+    margin: 0;
+  }
+  /*
+
+  	-- -- -- -- -- -- --
+  	Browser Fixes
+  	-- -- -- -- -- -- --
+  	
+  	This file uses CSS filtering methods to fix various
+  	layout bugs.
+
+  	Each of the following three imported files is a 
+  	separate, browser-specific CSS file that keeps all 
+  	hacks out of the main style sheet.
+  	
+  	Over time, as supporting these browsers no longer
+  	remains a priority, cleaning up the hacks is as
+  	easy as deleting the @import statement below, or
+  	simply no longer linking this file from the HTML.
+  	
+  */
+
+  /* 
+    fix ie6 "peekaboo bug" using the "holly hack". 
+    Note, this style only gets applied to ie6
+  */
+  * html .wrapper {
+    height: 0.1%;
+  }
+
+  /* 
+   * IE5 mac - overrides the IE/Win hack 
+   */
+
+  /*\*//*/
+
+  * html #threecolumn div {
+  	height: auto;
+  }
+
+  /**/
+
+
+  /* 
+   * IE5/Win-specific CSS -ensures #container wraps all content on window resize
+   */
+
+  @media tty {
+   i{content:"\";/*" "*/}} * html #container { height: 1%; } /*";}
+  }/* */
+  /* Styling for editable elements. Eventually, this will be part of the style. */
+  .editable {
+    border: 1px dashed blue;
+  }
+  
+  #footer {
+    clear: both;
+  }
+  
+  /* Extra divs hidden by default. The custom CSS can override this though */
+  #extraDiv1, #extraDiv2, #extraDiv3, #extraDiv4, #extraDiv5, #extraDiv6 {
+    display: none;
+  }
+  
+  a img,:link img,:visited img {border: none;}
+
+
+  /*
+    -- -- -- -- -- -- --
+    1 Column Layout
+    -- -- -- -- -- -- --
+  */
+
+  /* Center #container, constrain to 718px width
+  ----------------------------------------------- */
+  body {
+    text-align: center;
+  }
+  #container {
+    width: 718px;
+    text-align: left;
+    margin: 0 auto;
+  }
+
+  #main-content {
+    overflow: hidden;
+  }
+
+  /** BEGIN CUSTOM SKIN **/
+    h1,h2,h3,h4,h5,h6,pre,code,p {font-size: 1em;}
+    dl,li,dt,dd,h1,h2,h3,h4,h5,h6,pre,form,body,html,p,blockquote,fieldset,input {margin: 0; padding: 0;}
+    a img,:link img,:visited img {border: none;}
+    address {font-style: normal;}
+
+    /* Theme: Spring Branches */
+
+    html {background: #A0AA6D;}
+    body {background:#A0AA6D;font-family:'Georgia', 'Times New Roman','Times', serif;font-size:0.85em;margin:0px;}
+    a {color:#3366FF; text-decoration:none; border-bottom:1px dotted #3366FF;}
+    a:visited {color:#CC33FF; text-decoration:none; border-bottom:1px dotted #CC33FF;}
+    a:hover,a:active{color:#FF6600; text-decoration:none;border-bottom:1px dotted #FF6600;}
+    b, strong {font-weight:bold;}
+    blockquote {border-left:2px dotted #A0AA6D;margin:1em 3em;padding-left:1em;font-size:0.8em;color:#697335;}
+    blockquote p {line-height:1.45em;}
+    em {font-style:italic;}
+    h1, h2, h3, h4, h5, h6 {font-weight:normal;margin:1.5em 0 0.5em 0;}
+    h1 {font-size:2.25em;color:#697335;margin:0;border-bottom:3px solid #A0AA6D;}
+    h2 {font-size:2em;color:#697335;border-bottom:3px dotted #A0AA6D;}
+    h3 {font-size:1.75em;color:#697335;border-bottom:2px solid #A0AA6D;}
+    h4 {font-size:1.5em;color:#697335;border-bottom:2px dotted #A0AA6D;}
+    h5 {font-size:1.25em;color:#697335;border-bottom:1px solid #A0AA6D;}
+    h6 {font-size:1em; color:#697335;border-bottom:1px dotted #A0AA6D;}
+    p, li {color:#697335;line-height:1.75em;margin:0 0 1em 0;}
+    blockquote p, table p, dd p, li p, #header p {margin-bottom:0.5em;}
+    ul, ol {margin:1em 0; padding-left: 1.6em;}
+    li {margin:0.25em 0;}
+    ul li {list-style-type:disc;}
+    ol li {list-style-type:decimal;}
+    table {border:1px solid #A0AA6D;border-width:1px 1px 0 1px;}
+    table caption {
+  	display:block;
+  	white-space:nowrap;
+  	margin:0.5em 1em;
+  	color:#697335;
+  	font-size:0.85em;
+  }
+    table td, table th {padding:0.5em 1em;vertical-align:top;}
+    table th {background-color:#A0AA6D;color:#E9ECCF;}
+    table td {border-bottom:1px solid #A0AA6D; color:#697335;}
+
+    dl {margin:1em;line-height:1.5em;list-style-type:disc;color:#697335;}
+    dt {margin-top:0.5em;color:#697335;}
+    dd {margin-left:2em;color:#697335;}
+
+    #adsense {text-align:center;}
+    #container {
+    	  padding: 0px; 	  
+  	  background-color:#E9ECCF;
+  	  margin:0px auto;
+    }
+    #footer {margin-top:0em;
+    	background: URL("/eats/images/skin_branch_bottom.jpg") no-repeat bottom left;
+  	background-color:#E9ECCF;
+    }
+
+    #footer hr {margin:0px;}
+    #footer p {margin:0px;}
+    #footer wrapper {margin:0px;}
+    
+    #g_footer {
+  	font-size:0.85em;
+  	font-family:Georgia, "Times New Roman", Times, serif;
+  	color:#697335;
+  	text-align:center;
+  	margin:0px;
+    }
+  	
+
+    #page-title { font-family:Georgia, "Times New Roman", Times, serif;
+      text-align:left;
+  	font-style:italic;
+  	padding-top:75px;
+  	border:none;
+    }
+    #g_description { font-family:Georgia, "Times New Roman", Times, serif;
+  	text-align:right;
+  	padding-left:25px;
+  	padding-right:25px;
+  	font-style:italic;
+  	color:#A0AA6D;
+    }
+    
+    #header {
+  	background: URL("/eats/images/skin_branch_top.jpg") no-repeat top left;
+  	background-color: #D2D6B1;
+    }
+
+    #header .wrapper {
+      padding-left: 260px;
+    }	
+
+    #sidebar {font-size:0.85em;
+      background: URL("/eats/images/skin_branch_main_bg.jpg") repeat-x top left;
+      background-color:#E9ECCF;
+  	padding:5px;
+    }
+    #sidebar :first-child {margin-top:0;}
+    #sidebar-alternate {font-size:0.85em;
+      background: URL("/eats/images/skin_branch_main_bg.jpg") repeat-x top left;
+      background-color:#E9ECCF;
+  	padding:5px;
+    }
+    #sidebar-alternate :first-child {margin-top:0;}
+    #main-content { background: URL("/eats/images/skin_branch_main_bg.jpg") repeat-x top left;
+      background-color:#E9ECCF;
+  	padding:10px;
+    }
+    
+    #main-content h2:first-child {margin-top:0;}	
+
+    hr {
+    height:1px;
+    margin:0px 20px;
+    background-color:#E9ECCF;
+    border:none;
+    border-bottom:2px dotted #A0AA6D;
+    }
+    
+    @media print {
+      html {background:#fff !important;}
+      #container {border-width:0px !important;padding:0 !important;}
+      .info-icon {display: none !important;}
+      .add-grocery {display: none !important;}
+      #header {display: none !important;}
+      #footer {display: none !important;}
+      #g_body h2 {font-size:1em !important; display: inline !important; color: #000000 !important; border-bottom:3px none !important;}
+      #g_body p {display: none !important;}
+      .vote-count {display: inline !important;}
+    }
+
+    /* Tweaks for Three-column layout
+    ----------------------------------------------- */
+    #threecolumn #main-content .wrapper {}
+    #threecolumn #sidebar {width:118px;}
+    #threecolumn #sidebar-alternative {width:118px;}
+    #threecolumn p.description {margin:0px;}
+    
+    /* Tweaks for Two-column Left layout
+    ----------------------------------------------- */
+    #twocolumn-left #main-content .wrapper {}
+    #twocolumn-left #sidebar {width:218px;}
+
+    /* Tweaks for Two-column Right layout
+    ----------------------------------------------- */
+    #twocolumn-right #main-content .wrapper {}
+    #twocolumn-right #sidebar {width:218px;}
+    
+    /* Tweaks for Two-column Liquid layout
+    ----------------------------------------------- */
+    #twocolumn-liquid-right #container {}
+    #twocolumn-liquid-right #main-content .wrapper {}
+    #twocolumn-liquid-left #container {}
+    #twocolumn-liquid-left #main-content .wrapper {}
+
+    /* Tweaks for One-column Liquid layout
+    ----------------------------------------------- */
+
+    /* Tweaks for One-column layout
+    ----------------------------------------------- */
+    #onecolumn #main-content .wrapper {}
+
+
+  /** END CUSTOM SKIN **/
+
+  /** BEGIN RON SKIN **/
+
+    .info-icon {
+    border: 0pt none;
+    background-color: transparent;
+    clear: right;
+    margin-bottom: 1em;
+    float: right;
+    margin-left: 1em;
+    color: #697335;
+    }
+
+    .info-icon a {color:#697335;}
+    .info-icon a:visited {color:#697335;}
+    .info-icon a:hover,a:active{color:#FF6600;}
+
+    .add-grocery {color:#697335;}
+
+  /** END RON SKIN **/
+
+  </style>
+
+  <!-- Hack to avoid flash of unstyled content in IE -->
+  <script> </script>
+</head>
+
+<body id="onecolumn">
+  <div id="container">
+    <div class="wrapper">
+      <div id="header">
+        <div class="wrapper">
+          <h1 id="page-title"><div id='g_title'><p>Pre-中秋烤肉晚會</p></div></h1>
+          <div style="clear: both"></div>
+          <p class="description"><div id='g_description'><p>還有KTV歌唱跳舞大會&nbsp;</p></div></p>
+          <div style="clear: both"></div>
+        </div>
+      </div>
+      <!-- /wrapper --><!-- /header -->
+      <div id="main-content">
+        <div class="wrapper">
+          <div class="content-item">
+            <div id="g_body">
+
+              <%
+                 var length = groceries.length;
+                 for (var i = 0; i < length; i++) {
+                   var grocery = groceries[i];
+              %>
+              <div>
+                <h2><%= grocery.title %></h2>
+                <span class="info-icon">
+                  <span class="vote-count"><%= grocery.vote %>票</span>&nbsp;
+                  <a href="http://images.google.com/images?q=<%= grocery.title %>&amp;hl=zh-TW"><img title="在 Google Image 搜尋「<%=grocery.title %>」" src="/eats/images/google.gif" /></a>&nbsp;
+                  <a href="http://tw.knowledge.yahoo.com/search/search_result?p=<%= grocery.title %>"><img title="在 Yahoo 知識+ 搜尋「<%=grocery.title %>」" src="/eats/images/knowledge.gif" /></a>&nbsp;
+                  <a href="http://search.twitter.com/search?q=<%= grocery.title %>"><img title="在 Twitter 搜尋「<%=grocery.title %>」" src="/eats/images/twitter.gif" /></a>
+                </span>
+                <p><%= grocery.text %></p>
+              </div>
+              <% } %>
+
+            </div>
+          </div>
+          <div style="clear: both"></div>
+        </div>
+      </div>
+      <!-- /wrapper --><!-- /main-content -->
+      <div id="footer"><div class="wrapper">
+        <hr/>
+        <p></p><div id="g_footer"><p>吃什麼吃什麼？？？ <br></p></div>
+        <div style="clear: both"></div>
+      </div></div>
+      <!-- /wrapper --><!-- /footer -->
+    </div>
+  </div>
+  <!-- /wrapper --><!-- /container -->
+
+<div id="extraDiv1"><span></span></div><div id="extraDiv2"><span></span></div>
+<div id="extraDiv3"><span></span></div><div id="extraDiv4"><span></span></div>
+<div id="extraDiv5"><span></span></div><div id="extraDiv6"><span></span></div>
+
+</body>
+</html>

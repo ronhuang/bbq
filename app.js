@@ -54,8 +54,8 @@ app.get('/eats/midautumn2007', function(req, res){
 
   var event = new Date(2007, 9 - 1, 15); // Javascript month starts from 0.
   event = event.getTime();
-  var query = grocery.Grocery.all(session).filter('event', '=', event).order(property, ascending);
 
+  var query = grocery.Grocery.all(session).filter('event', '=', event).order(property, ascending);
   query.list(null, function(groceries) {
     res.render('midautumn2007', {
       groceries: groceries,
@@ -65,8 +65,15 @@ app.get('/eats/midautumn2007', function(req, res){
 });
 
 app.get('/eats/y2006', function(req, res){
-  res.render('y2006', {
-    title: 'Express'
+  var event = new Date(2006, 9 - 1, 22); // Javascript month starts from 0.
+  event = event.getTime();
+
+  var query = grocery.Grocery.all(session).filter('event', '=', event).order('vote', false).order('submit_date', true);
+  query.list(null, function(groceries) {
+    res.render('y2006', {
+      groceries: groceries,
+      layout: false,
+    });
   });
 });
 
