@@ -10,6 +10,6 @@ var Grocery = exports.Grocery = persistence.define('Grocery', {
   event: "DATE"
 });
 
-Grocery.index('id');
+Grocery.index('submit_date');
 Grocery.index('vote');
 Grocery.index('submitter');

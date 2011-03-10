@@ -45,13 +45,10 @@ app.get('/eats/?', function(req, res){
 });
 
 app.get('/eats/midautumn2007', function(req, res){
-  var sort = req.param('sort', req.cookies.sort || "id DESC");
-  console.log("sort: %s", sort);
+  var sort = req.param('sort', req.cookies.sort || "submit_date DESC");
   var sort = sort.split(' ');
-  console.log("property: %s, ascending: %s", sort[0], sort[1]);
   var property = sort[0];
   var ascending = (sort[1] == "ASC");
-  console.log("ascending", ascending);
 
   var event = new Date(2007, 9 - 1, 15); // Javascript month starts from 0.
   event = event.getTime();
