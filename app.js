@@ -4,6 +4,10 @@
  */
 
 var express = require('express');
+var grocery = require('./models/grocery');
+
+var persistence = require('persistencejs/lib/persistence').persistence;
+var persistenceStore = require('persistencejs/lib/persistence.store.sqlite');
 
 var app = module.exports = express.createServer();
 
@@ -22,10 +26,16 @@ app.configure(function(){
 
 app.configure('development', function(){
   app.use(express.errorHandler({ dumpExceptions: true, showStack: true }));
+  persistenceStore.config(persistence, __dirname + '/db/devel.db');
 });
 
 app.configure('production', function(){
   app.use(express.errorHandler());
+  persistenceStore.config(persistence, __dirname + '/db/prod.db');
+});
+
+var session = persistenceStore.getSession(function() {
+  session.schemaSync();
 });
 
 // Routes
@@ -34,24 +44,24 @@ app.get('/eats/?', function(req, res){
   res.redirect('/eats/midautumn2007');
 });
 
-var Grocery = function () {
-  this.id = 0;
-  this.submitter = "Ron";
-  this.submit_date = new Date;
-  this.title = "知味香玉米";
-  this.vote = 1;
-  this.url_title = "知味香玉米";
-  this.text = "這家比較讚...";
-};
-
 app.get('/eats/midautumn2007', function(req, res){
-  var groceries = [];
-  groceries.push(new Grocery);
-  groceries.push(new Grocery);
+  var sort = req.param('sort', req.cookies.sort || "id DESC");
+  console.log("sort: %s", sort);
+  var sort = sort.split(' ');
+  console.log("property: %s, ascending: %s", sort[0], sort[1]);
+  var property = sort[0];
+  var ascending = (sort[1] == "ASC");
+  console.log("ascending", ascending);
 
-  res.render('midautumn2007', {
-    groceries: groceries,
-    layout: false,
+  var event = new Date(2007, 9 - 1, 15); // Javascript month starts from 0.
+  event = event.getTime();
+  var query = grocery.Grocery.all(session).filter('event', '=', event).order(property, ascending);
+
+  query.list(null, function(groceries) {
+    res.render('midautumn2007', {
+      groceries: groceries,
+      layout: false,
+    });
   });
 });
 
