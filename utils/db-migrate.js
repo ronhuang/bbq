@@ -46,7 +46,7 @@ new_db.open(new_db_path, function(error) {
               row = rows[i];
               new_statement.bind(1, row.submitter, function(error) {
                 if (error) return error;
-                new_statement.bind(2, Date.parse(row.submit_date), function(error) {
+                new_statement.bind(2, Date.parse(row.submit_date) / 1000, function(error) {
                   if (error) return error;
                   new_statement.bind(3, row.title, function(error) {
                     if (error) return error;
@@ -56,13 +56,13 @@ new_db.open(new_db_path, function(error) {
                         if (error) return error;
                         new_statement.bind(6, row.picture, function(error) {
                           if (error) return error;
-                          new_statement.bind(7, Date.parse(row.event), function(error) {
+                          new_statement.bind(7, Date.parse(row.event) / 1000, function(error) {
                             if (error) return error;
                             new_statement.bind(8, "" + row.id, function(error) {
                               new_statement.step(function(error, row) {
                                 if (error) return error;
-                                console.log("Imported row %d/%d", i, length);
-                                if (++i < length) {
+                                console.log("Imported row %d/%d", ++i, length);
+                                if (i < length) {
                                   new_statement.clearBindings();
                                   new_statement.reset();
                                   doStep();
