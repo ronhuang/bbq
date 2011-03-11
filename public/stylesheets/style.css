@@ -1,5 +1,5 @@
 body {
-    background:#fff url(/eats/images/blog/main_bg_2.gif) repeat-x;
+    background:#fff url(../images/blog/main_bg_2.gif) repeat-x;
     font-family:'Lucida Grande',Verdana,Tahoma,Arial;
     font-size:62.5%;
     line-height:16px;
@@ -41,7 +41,7 @@ small {
 /* ---------------------------- */
 
 #top {
-    background:#35312f url(/eats/images/blog/main_bg.gif) no-repeat;
+    background:#35312f url(../images/blog/main_bg.gif) no-repeat;
     height:71px;
 }
 
@@ -53,21 +53,21 @@ small {
 #top h1 a {
     display:block;
     text-indent:-3000px;
-    background:url(/eats/images/blog/logo_new.gif) no-repeat;
+    background:url(../images/blog/logo_new.gif) no-repeat;
     width:316px;
     height:36px;
 }
 
 #top div#msg {
     float:right;
-    background:#ffffff url(/eats/images/blog/twitter_left.gif) no-repeat top left;
+    background:#ffffff url(../images/blog/twitter_left.gif) no-repeat top left;
     color:#3f3b39;
     margin:22px 0 0 0;
     padding-left:16px;
 }
 
 #top div#msg div {
-    background:url(/eats/images/blog/twitter_right.gif) no-repeat top right;
+    background:url(../images/blog/twitter_right.gif) no-repeat top right;
     padding-right:10px;
     line-height:2.7em;
 }
@@ -95,45 +95,45 @@ small {
 
 #top2 #menu li.popular a:link, #top2 #menu li.popular a:visited {
     width:55px;
-    background:url(/eats/images/blog/menu_new.gif) no-repeat 0 0;
+    background:url(../images/blog/menu_new.gif) no-repeat 0 0;
 }
 
 #top2 #menu li.popular a:hover, #top2 #menu li.popular a:active {
-    background:url(/eats/images/blog/menu_new.gif) no-repeat 0 -35px;
+    background:url(../images/blog/menu_new.gif) no-repeat 0 -35px;
 }
 
 #top2 #menu li.latest a:link, #top2 #menu li.latest a:visited {
     width:58px;
-    background:url(/eats/images/blog/menu_new.gif) no-repeat -55px 0;
+    background:url(../images/blog/menu_new.gif) no-repeat -55px 0;
 }
 
 #top2 #menu li.latest a:hover, #top2 #menu li.latest a:active {
-    background:url(/eats/images/blog/menu_new.gif) no-repeat -55px -35px;
+    background:url(../images/blog/menu_new.gif) no-repeat -55px -35px;
 }
 
 #top2 #menu li.owner a:link, #top2 #menu li.owner a:visited {
     width:62px;
-    background:url(/eats/images/blog/menu_new.gif) no-repeat -113px 0;
+    background:url(../images/blog/menu_new.gif) no-repeat -113px 0;
 }
 
 #top2 #menu li.owner a:hover, #top2 #menu li.owner a:active {
-    background:url(/eats/images/blog/menu_new.gif) no-repeat -113px -35px;
+    background:url(../images/blog/menu_new.gif) no-repeat -113px -35px;
 }
 
 #top2 #menu li.contact a:link, #top2 #menu li.contact a:visited {
     width:52px;
-    background:url(/eats/images/blog/menu_new.gif) no-repeat -175px 0;
+    background:url(../images/blog/menu_new.gif) no-repeat -175px 0;
 }
 
 #top2 #menu li.contact a:hover, #top2 #menu li.contact a:active {
-    background:url(/eats/images/blog/menu_new.gif) no-repeat -175px -35px;
+    background:url(../images/blog/menu_new.gif) no-repeat -175px -35px;
 }
 
 #body #search_box {
     width:100%;
     height:35px;
     margin:20px 0 0 0;
-    background:#fff9b7 url(/eats/images/blog/info_left.gif) no-repeat top left;
+    background:#fff9b7 url(../images/blog/info_left.gif) no-repeat top left;
 }
 
 #body #search_box form {
@@ -141,7 +141,7 @@ small {
 }
 
 #body #search_box input {
-    background:#fefefe url(/eats/images/blog/input_box.gif) repeat-x bottom left;
+    background:#fefefe url(../images/blog/input_box.gif) repeat-x bottom left;
     border:1px solid #a32c0d;
     color:#3d3937;
     width:100px;
@@ -207,7 +207,7 @@ div.blog_post div.info ul.dropit li em.link {
     font-style:normal;
     font-weight:bold;
     cursor:pointer;
-    background:url(/eats/images/blog/share_link.gif) no-repeat top right;
+    background:url(../images/blog/share_link.gif) no-repeat top right;
     padding-right:13px;
 }
 
@@ -222,22 +222,22 @@ div.blog_post div.info ul.dropit li ul {
     display:none;
     width:132px;
     padding:3px 0 0 6px;
-    background:url(/eats/images/blog/share_arrow.gif) no-repeat top left;
+    background:url(../images/blog/share_arrow.gif) no-repeat top left;
 }
 
 div.blog_post div.info ul.dropit li ul li {
     background:#f14619;
     padding:2px 11px 4px 8px;
-    background:url(/eats/images/blog/share_one.png) repeat-y;
+    background:url(../images/blog/share_one.png) repeat-y;
 }
 
 div.blog_post div.info ul.dropit li ul li.first {
-    background:url(/eats/images/blog/share_top.png) no-repeat top left;
+    background:url(../images/blog/share_top.png) no-repeat top left;
     padding-top:7px;
 }
 
 div.blog_post div.info ul.dropit li ul li.last {
-    background:url(/eats/images/blog/share_bottom.png) no-repeat bottom left;
+    background:url(../images/blog/share_bottom.png) no-repeat bottom left;
     padding-bottom:10px;
 }
 
@@ -252,13 +252,13 @@ div.blog_post div.info ul.dropit li ul li a:hover, div.blog_post div.info ul.dro
     color:#ffea00;
 }
 
-div.blog_post div.info ul.dropit li ul li a.digg { background:url(/eats/images/blog/icons/digg.gif) no-repeat top left; }
-div.blog_post div.info ul.dropit li ul li a.delicious { background:url(/eats/images/blog/icons/delicious.gif) no-repeat top left; }
-div.blog_post div.info ul.dropit li ul li a.magnolia { background:url(/eats/images/blog/icons/magnolia.gif) no-repeat top left; }
-div.blog_post div.info ul.dropit li ul li a.newsvine { background:url(/eats/images/blog/icons/newsvine.gif) no-repeat top left; }
-div.blog_post div.info ul.dropit li ul li a.reddit { background:url(/eats/images/blog/icons/reddit.gif) no-repeat top left; }
-div.blog_post div.info ul.dropit li ul li a.stumbleupon { background:url(/eats/images/blog/icons/stumbleupon.gif) no-repeat top left; }
-div.blog_post div.info ul.dropit li ul li a.technorati { background:url(/eats/images/blog/icons/technorati.gif) no-repeat top left; }
+div.blog_post div.info ul.dropit li ul li a.digg { background:url(../images/blog/icons/digg.gif) no-repeat top left; }
+div.blog_post div.info ul.dropit li ul li a.delicious { background:url(../images/blog/icons/delicious.gif) no-repeat top left; }
+div.blog_post div.info ul.dropit li ul li a.magnolia { background:url(../images/blog/icons/magnolia.gif) no-repeat top left; }
+div.blog_post div.info ul.dropit li ul li a.newsvine { background:url(../images/blog/icons/newsvine.gif) no-repeat top left; }
+div.blog_post div.info ul.dropit li ul li a.reddit { background:url(../images/blog/icons/reddit.gif) no-repeat top left; }
+div.blog_post div.info ul.dropit li ul li a.stumbleupon { background:url(../images/blog/icons/stumbleupon.gif) no-repeat top left; }
+div.blog_post div.info ul.dropit li ul li a.technorati { background:url(../images/blog/icons/technorati.gif) no-repeat top left; }
 
 div.blog_post div.body div.title h1 {
     color:#3f3b39;
@@ -396,14 +396,14 @@ div.grid div.grid2 {
 /* ---------------------------- */
 
 p.notice {
-    background:#ef643f url(/eats/images/blog/notice_left.gif) no-repeat top left;
+    background:#ef643f url(../images/blog/notice_left.gif) no-repeat top left;
     height:26px;
     width:650px;
     margin:20px 0 0 0;
 }
 
 p.notice span {
-    background:#ef643f url(/eats/images/blog/notice_right.gif) no-repeat top right;
+    background:#ef643f url(../images/blog/notice_right.gif) no-repeat top right;
     display:block;
     height:21px;
     margin-left:28px;
@@ -414,7 +414,7 @@ p.notice span {
 }
 
 p.notice2 {
-    background:#ef643f url(/eats/images/blog/notice_left2.gif) no-repeat top left;
+    background:#ef643f url(../images/blog/notice_left2.gif) no-repeat top left;
 }
 
 p.notice2 span {
@@ -427,14 +427,14 @@ p.notice2 span a {
 }
 
 p.info {
-    background:#fff9b7 url(/eats/images/blog/info_left.gif) no-repeat top left;
+    background:#fff9b7 url(../images/blog/info_left.gif) no-repeat top left;
     height:26px;
     width:650px;
     margin:20px 0 0 0;
 }
 
 p.info span {
-    background:#fff9b7 url(/eats/images/blog/info_right.gif) no-repeat top right;
+    background:#fff9b7 url(../images/blog/info_right.gif) no-repeat top right;
     display:block;
     height:21px;
     margin-left:28px;
@@ -445,7 +445,7 @@ p.info span {
 }
 
 p.info2 {
-    background:#fff9b7 url(/eats/images/blog/info_left2.gif) no-repeat top left;
+    background:#fff9b7 url(../images/blog/info_left2.gif) no-repeat top left;
 }
 
 p.info2 span {
@@ -496,7 +496,7 @@ ul.error li {
     display:block;
     width:129px;
     height:58px;
-    background:url(/eats/images/blog/rss.gif) no-repeat 0 0;
+    background:url(../images/blog/rss.gif) no-repeat 0 0;
     text-decoration:none;
     border:0;
     color:#3f3b39;
@@ -505,7 +505,7 @@ ul.error li {
 }
 
 #sidebar p.rss a:hover, #sidebar p.rss a:active {
-    background:url(/eats/images/blog/rss.gif) no-repeat 0 -68px;
+    background:url(../images/blog/rss.gif) no-repeat 0 -68px;
     color:#000;
 }
 
@@ -523,14 +523,14 @@ ul.error li {
     margin-top:12px;
     border-top:1px solid #d9d8d7;
     padding:13px 0 10px 71px;
-    background:url(/eats/images/blog/new_title.gif) no-repeat top left;
+    background:url(../images/blog/new_title.gif) no-repeat top left;
 }
 
 #sidebar p.help {
     margin-top:12px;
     //border-top:1px solid #d9d8d7;
     padding:13px 0 10px 71px;
-    background:url(/eats/images/blog/help.png) no-repeat top left;
+    background:url(../images/blog/help.png) no-repeat top left;
 }
 
 #sidebar ul li {
@@ -589,7 +589,7 @@ div.comment_bit div.left {
 }
 
 div.comment_bit div.author {
-    background:url(/eats/images/blog/author.gif) no-repeat top right;
+    background:url(../images/blog/author.gif) no-repeat top right;
 }
 
 div.comment_bit div.right {

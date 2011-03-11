@@ -21,7 +21,7 @@ app.configure(function(){
   app.use(express.methodOverride());
   app.use(express.cookieParser());
   app.use(app.router);
-  app.use('/eats', express.static(__dirname + '/public'));
+  app.use(express.static(__dirname + '/public'));
 });
 
 app.configure('development', function(){
@@ -40,11 +40,11 @@ var session = persistenceStore.getSession(function() {
 
 // Routes
 
-app.get('/eats/?', function(req, res){
-  res.redirect('/eats/midautumn2007');
+app.get('/', function(req, res){
+  res.send("What to eat?");
 });
 
-app.get('/eats/midautumn2007', function(req, res){
+app.get('/midautumn2007', function(req, res){
   var sort = req.param('sort', req.cookies.sort || "submit_date DESC");
   res.cookie('sort', sort, { maxAge: 604800000 }); // 7 days.
   var sort = sort.split(' ');
@@ -63,7 +63,7 @@ app.get('/eats/midautumn2007', function(req, res){
   });
 });
 
-app.get('/eats/y2006', function(req, res){
+app.get('/y2006', function(req, res){
   var event = new Date(2006, 9 - 1, 22); // Javascript month starts from 0.
   event = event.getTime();
 
