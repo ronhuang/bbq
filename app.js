@@ -20,7 +20,6 @@ app.configure(function(){
   app.use(express.bodyParser());
   app.use(express.methodOverride());
   app.use(express.cookieParser());
-  app.use(express.session({ secret: 'darth feces was here' }));
   app.use(app.router);
   app.use('/eats', express.static(__dirname + '/public'));
 });
